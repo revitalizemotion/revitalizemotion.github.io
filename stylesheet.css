@@ -2,7 +2,6 @@
 body {
   margin: 0;
   padding: 0;
-  text-align: center;
   font-family: "Helvetica Neue", "Calibri Light", Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -48,15 +47,15 @@ footer {
   max-width: 640px;
 }
 
-.header-left { 
+.header-left {
   flex: 1;
   /*border: 1px solid red;*/
 }
-.header-center { 
+.header-center {
   flex: 2;
   /*border: 1px solid black;*/
 }
-.header-right { 
+.header-right {
   flex: 1;
   /*border: 1px solid green;*/
 }
@@ -87,26 +86,31 @@ a.plain:visited {
   color: inherit;
 }
 
+ul.circle {
+  list-style: circle;
+}
+
 .main-and-sidebar-wrapper {
-  max-width: 960px;
+  /*max-width: 960px;*/
   display: flex;
   flex-direction: row;
+  padding: 1em;
 }
 
 .main {
-  flex: 3;
+  flex: 2;
   padding: 1em;
 }
 
 .sidebar {
+  border-radius: 5px;
   flex: 1;
-  border: 1px solid red;
+  padding: 1em;
 }
 
 .logo {
   margin: 0;
   font-size: 2em;
-  font-family: "Helvetica Neue", "Calibri Light", Roboto, sans-serif;
 }
 
 .block {
@@ -125,6 +129,42 @@ a.plain:visited {
   margin: auto;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.alert {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  text-align: center;
+}
+
+.warning {
+  background: orange;
+  color: white;
+}
+
+.info {
+  background: lightblue;
+  color: white;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.signature {
+  text-align: right;
+}
+
+hr {
+  width: 10em;
+  align: center;
+  border-style: dashed;
+}
+
 /*
  * Media queries
 */
@@ -132,34 +172,34 @@ a.plain:visited {
 @media (max-width: 480px) {
 
   .logo {
-    display: none;
+  display: none;
   }
 
   header {
-    /* Reverse the axis of the header, making it vertical. */
-    flex-direction: column;
+  /* Reverse the axis of the header, making it vertical. */
+  flex-direction: column;
 
-    /* Align items to the begining (the left) of the header. */
-    align-items: flex-start;
+  /* Align items to the begining (the left) of the header. */
+  align-items: flex-start;
   }
 
   nav {
-    padding: 0;
+  padding: 0;
   }
 
   .header-center ul li {
-    display: block;
-    width: 100%;
-    line-height: 1.5;
-    padding: 0;
+  display: block;
+  width: 100%;
+  line-height: 1.5;
+  padding: 0;
   }
 
   .main-and-sidebar-wrapper {
-    flex-direction: column;
+  flex-direction: column;
   }
 
   .main {
-    margin-right: 0;
-    margin-bottom: 1em;
+  margin-right: 0;
+  margin-bottom: 1em;
   }
 }
