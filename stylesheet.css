@@ -1,0 +1,165 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: "Helvetica Neue", "Calibri Light", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #444444;
+  letter-spacing: 0.02em;
+}
+
+header {
+  /*display: flex;*/
+  margin-bottom: 1em;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 0;
+  padding-left: 1em;
+  padding-top: 0;
+  padding-right: 1em;
+  padding-bottom: 0;
+  border-bottom: 3px solid #8bb63f;
+  color: white;
+  background: #1d82c1;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+footer {
+  flex: 1 0 1.5em;
+  margin-top: 1em;
+  padding: 1em;
+  background: lightgray;
+  color: white;
+  font-size: 80%;
+}
+
+.container {
+  max-width: 640px;
+}
+
+.header-left { 
+  flex: 1;
+  /*border: 1px solid red;*/
+}
+.header-center { 
+  flex: 2;
+  /*border: 1px solid black;*/
+}
+.header-right { 
+  flex: 1;
+  /*border: 1px solid green;*/
+}
+
+.header-center ul {
+  padding: 0;
+  list-style: none;
+}
+
+.header-center ul li {
+  line-height: 2;
+  padding: 0.5em;
+  display: inline-block;
+  text-transform: uppercase;
+  color: white;
+}
+
+.header-center ul li:hover {
+  background-color: navy;
+}
+
+a.plain {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.plain:visited {
+  color: inherit;
+}
+
+.main-and-sidebar-wrapper {
+  max-width: 960px;
+  display: flex;
+  flex-direction: row;
+}
+
+.main {
+  flex: 3;
+  padding: 1em;
+}
+
+.sidebar {
+  flex: 1;
+  border: 1px solid red;
+}
+
+.logo {
+  margin: 0;
+  font-size: 2em;
+  font-family: "Helvetica Neue", "Calibri Light", Roboto, sans-serif;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.full {
+  width: 100%;
+}
+
+.center {
+  margin: auto;
+}
+
+/*
+ * Media queries
+*/
+
+@media (max-width: 480px) {
+
+  .logo {
+    display: none;
+  }
+
+  header {
+    /* Reverse the axis of the header, making it vertical. */
+    flex-direction: column;
+
+    /* Align items to the begining (the left) of the header. */
+    align-items: flex-start;
+  }
+
+  nav {
+    padding: 0;
+  }
+
+  .header-center ul li {
+    display: block;
+    width: 100%;
+    line-height: 1.5;
+    padding: 0;
+  }
+
+  .main-and-sidebar-wrapper {
+    flex-direction: column;
+  }
+
+  .main {
+    margin-right: 0;
+    margin-bottom: 1em;
+  }
+}
