@@ -1,12 +1,12 @@
 
 body {
   margin: 0;
-  padding: 2em;
+  padding: 2em 5em;
   font-family: "Helvetica Neue", "Calibri Light", Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #1F001F;
-  color: #444444;
+  color: #444;
   letter-spacing: 0.02em;
 }
 
@@ -17,13 +17,15 @@ header {
 
 nav {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   margin: 0;
   padding-left: 3em;
   padding-top: 0;
   padding-right: 3em;
   padding-bottom: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   border-bottom: 1.5em solid #151515;
   color: white;
   background: #80afc7;
@@ -39,12 +41,18 @@ footer {
   padding: 1em;
   text-align: center;
   background: #151515;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   color: #9f9f9f;;
   font-size: 80%;
 }
 
-h4 {
+h1, h2, h3, h4, h5, h6 {
   font-style: normal;
+}
+
+img {
+  border-radius: 5px;
 }
 
 .container {
@@ -53,15 +61,14 @@ h4 {
 
 .header-left {
   flex: 1;
-  /*border: 1px solid red;*/
 }
+
 .header-center {
   flex: 2;
-  /*border: 1px solid black;*/
 }
+
 .header-right {
   flex: 1;
-  /*border: 1px solid green;*/
 }
 
 .header-center ul {
@@ -73,7 +80,7 @@ h4 {
   line-height: 2;
   padding: 0.5em;
   display: inline-block;
-  /*border-radius: 5px;*/
+  border-radius: 5px;
   text-transform: uppercase;
   color: white;
 }
@@ -112,11 +119,14 @@ ul.circle {
   flex: 2;
   padding: 1em;
   margin: 0.5em;
+}
+
+.main > h1, .main > h2, .main > h3 {
   color: #1F001F;
 }
 
 .sidebar {
-  /*border-radius: 5px;*/
+  border-radius: 5px;
   flex: 1;
   margin: 2em;
 }
@@ -126,8 +136,14 @@ ul.circle {
   padding-right: 2em;
   padding-bottom: 1em;
   padding-left: 2em;
-  background: #80afc7;
+  /*background: #80afc7;*/
+  background: #151515;
   color: #fff;
+  font-size: 90%;
+}
+
+.sidebar-content h1, h2, h3, h4, h5, h6 {
+  color: inherit;
 }
 
 .sidebar-content ul {
@@ -135,7 +151,12 @@ ul.circle {
 }
 
 .sidebar-content ul li {
+  margin-bottom: 8px;
   list-style: circle;
+}
+
+.sidebar-content ul li a {
+  color: inherit;
 }
 
 .logo {
@@ -153,6 +174,10 @@ ul.circle {
 
 .full {
   width: 100%;
+}
+
+.lg {
+  width: 75%;
 }
 
 .center {
