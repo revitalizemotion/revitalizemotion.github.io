@@ -31,12 +31,11 @@ nav {
   justify-content: space-between;
   margin: 0;
   padding-left: 3em;
-  padding-top: 0;
+  padding-top: 1.5em;
   padding-right: 3em;
-  padding-bottom: 0;
+  padding-bottom: 1.5em;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  border-bottom: 1.5em solid #151515;
   color: white;
   background: #80afc7;
   text-align: center;
@@ -51,7 +50,7 @@ footer {
   flex: 1 0 1.5em;
   padding: 1em;
   text-align: center;
-  background: #151515;
+  background: #333333;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   color: #9f9f9f;;
@@ -68,8 +67,47 @@ img {
 
 hr {
   width: 10em;
-  align: center;
   border-style: dashed;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+ul > li {
+    line-height: 1.5em;
+}
+
+a {
+    text-decoration: none;
+}
+
+a.plain {
+    color: inherit;
+}
+
+a:hover {
+    text-decoration-color: inherit;
+    text-decoration: underline;
+}
+
+a.plain:hover {
+    text-decoration: none;
+}
+
+.alert {
+    text-align: center;
+    padding: 1.5em;
+}
+
+.alert-info {
+    background: #E31C56;
+    color: whitesmoke;
+}
+
+.alert-info:hover {
+    background: #B90E50;
+    color: white;
 }
 
 .container {
@@ -110,13 +148,12 @@ hr {
   background: #2b83b0;
 }
 
-a.plain {
-  color: inherit;
-  text-decoration: none;
+.jumbotron > h1 {
+    font-size: 2em;
 }
 
-a.plain:visited {
-  color: inherit;
+.jumbotron > h2 {
+    font-size: 1.5em;
 }
 
 ul.circle {
@@ -144,6 +181,14 @@ address {
 
 .main > h1, .main > h2, .main > h3 {
   color: #1F001F;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.p-lg {
+    padding: 2em;
 }
 
 .sidebar {
@@ -180,6 +225,12 @@ address {
   color: inherit;
 }
 
+.underline-dotted {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 0.2em;
+}
+
 .logo {
   margin: 0;
   font-size: 2em;
@@ -209,17 +260,12 @@ address {
   text-align: center;
 }
 
-.alert {
-  display: block;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  padding: 0.5em;
-  text-align: center;
+.text-emphasis {
+    color: #1F001F;
 }
 
-.warning {
-  background: orange;
-  color: white;
+.text-muted {
+    color: #333;
 }
 
 .label {
@@ -271,6 +317,10 @@ address {
 
   nav {
     padding: 0;
+  }
+
+  .alert { 
+    padding: 0.5em;
   }
 
   .logo {
