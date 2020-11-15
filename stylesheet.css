@@ -102,12 +102,12 @@ a.plain:hover {
 
 .alert-info {
     background: #E31C56;
-    color: whitesmoke;
+    color: white;
 }
 
 .alert-info:hover {
     background: #B90E50;
-    color: white;
+    color: whitesmoke;
 }
 
 .container {
